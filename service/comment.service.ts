@@ -119,7 +119,7 @@ export class CommentService extends RequestScopeService {
         })
 
         const parsedCreatedAt = dayjs.utc(comment.createdAt).utcOffset(timezoneOffset).format(
-          'YYYY-MM-DD HH:mm',
+          'DD.MM.YYYY HH:mm',
         )
         const parsedContent = markdown.render(comment.content) as string
         return {
